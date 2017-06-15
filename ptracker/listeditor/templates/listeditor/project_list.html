@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 
 <!-- Add navbar - YES -->
-<!-- Add dropdown menu to navbar -  -->
-<!-- Add glyphicons for elements -->
-<!-- Add progress bars per project -->
+<!-- Add dropdown menu to navbar - YES -->
+<!-- Add glyphicons for elements - YES -->
+<!-- Add progress bars for each project -->
 <!-- Add ability to "group" projects -->
 
 <!-- ??? Add media objects for each project ??? -->
 
 {% load static %}
 <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.css' %}">
+
+<script type="text/javascript" src="{% static 'js/jquery-3.2.1.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/bootstrap.js' %}"></script>
 
 <nav class="navbar navbar-default">
     
@@ -32,7 +35,21 @@
         <!-- list of items in navbar -->
         <ul class="nav navbar-nav navbar-right">
             
-            <!-- PASTE HERE -->
+            <li class="dropdown">
+                
+              <!-- dropdown menu trigger -->
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                <span class="glyphicon glyphicon-user"></span> Guest <span class="caret"></span>
+              </a>
+                
+              <!-- dropdown menu content -->
+              <ul class="dropdown-menu">
+                <li><a href="#">Login</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="#">Settings</a></li>
+              </ul>
+                
+            </li>
             
         </ul>
         
