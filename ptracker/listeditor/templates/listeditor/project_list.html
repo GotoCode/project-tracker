@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+
+<!-- Add navbar - YES -->
+<!-- Add dropdown menu to navbar -  -->
+<!-- Add glyphicons for elements -->
+<!-- Add progress bars per project -->
+<!-- Add ability to "group" projects -->
+
+<!-- ??? Add media objects for each project ??? -->
+
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.css' %}">
+
+<nav class="navbar navbar-default">
+    
+    <div class="navbar-header">
+        
+        <a class="navbar-brand" href="#">Project Tracker</a>
+        
+        <!-- configure "overflow" button for mobile users -->
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="navbar-collapse-items">
+            <!-- "handmade" overflow icon -->
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        
+    </div>
+    
+    <div class="collapse navbar-collapse" id="navbar-collapse-items">
+        
+        <!-- list of items in navbar -->
+        <ul class="nav navbar-nav navbar-right">
+            
+            <!-- PASTE HERE -->
+            
+        </ul>
+        
+    </div>
+    
+</nav>
+
+<div class="container">
+    
+    <h2 class="text-center"> Hello, {{ message }}! </h2>
+
+    <div class="list-group">
+        
+        {% for title, desc in item_list %}
+        
+        <a class="list-group-item" href="#">
+            <h4 class="list-group-item-heading">{{ title }}</h4>
+            <p class="list-group-item-text">{{ desc }}</p>
+        </a>
+        
+        {% endfor %}
+        
+    </div>
+    
+</div>
